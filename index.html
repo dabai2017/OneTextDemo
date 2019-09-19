@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>一言API示例</title>
-
+		<link rel="icon" href="https://dabai2017.gitee.io/blog/favicon.ico">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 
 		<style type="text/css">
@@ -14,7 +14,7 @@
 				margin: 0;
 				width: fill;
 				height: fill;
-				background: darkslategrey;
+				background: url(img/6680281023688737293.webp);
 			}
 			
 			.di {
@@ -57,7 +57,6 @@
 			获取中...
 		</div>
 
-
 		<p>API地址(URL)</p>
 
 		<div class="di">
@@ -75,7 +74,7 @@
 			<br /> API版权来源 :
 			<a href="https://hitokoto.cn" target="_blank">一言网(Hitokoto.cn)</a>
 
-<br /> API使用方法 :
+			<br /> API使用方法 :
 			<a href="https://dabai2017.gitee.io/blog/2019/09/19/一言API使用方法/" target="_blank">一言API使用方法</a>
 		</div>
 	</body>
@@ -92,7 +91,7 @@
 
 			hitTextdata.innerText = xhr.responseText;
 			var data = JSON.parse(xhr.responseText);
-			hitText.innerText = data.hitokoto + "&nbsp;&nbsp;&nbsp;&nbsp;__" + data.from;
+			hitText.innerHTML = data.hitokoto + "&nbsp;&nbsp;&nbsp;&nbsp;__" + data.from;
 
 		}
 		xhr.send();
