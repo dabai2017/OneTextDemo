@@ -87,7 +87,7 @@
 		xhr.open('get', 'https://v1.hitokoto.cn');
 		xhr.onreadystatechange = function() {
 
-			hitTextdata.innerHTML = xhr.responseText;
+			hitTextdata.innerText = xhr.responseText;
 			var data = JSON.parse(xhr.responseText);
 			hitText.innerHTML = data.hitokoto + "&nbsp;&nbsp;&nbsp;&nbsp;__" + data.from;
 
